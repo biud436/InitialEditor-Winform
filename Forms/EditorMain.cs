@@ -209,8 +209,7 @@ namespace Editor
             // 마지막 맵 좌표를 표시한다.
             int mapX = Math.Abs(mouse.X / tw);
             int mapY = Math.Abs(mouse.Y / th);
-
-            darkStatusStrip1.Items[0].Text = String.Format("맵 좌표 : {2}, {3} | 마우스 좌표 : {0}, {1} | 타일 크기 : {4} x {5} | 마우스 클릭 여부 : {6} | 타일 ID : {7}", mx, my, mapX, mapY, tw, th, isMouseLB.ToString(), lastTileId);
+            darkStatusStrip1.Items[0].Text = $"맵 좌표 : {mapX}, {mapY} | 마우스 좌표 : {mx}, {my}";
         }
 
         private void EditorMain_MouseMove(object sender, MouseEventArgs e)
@@ -282,53 +281,6 @@ namespace Editor
         {
             var scriptEditor = new ScriptEditor();
             scriptEditor.ShowDialog();
-        }
-
-        private void darkObjectAddButton_Click(object sender, EventArgs e)
-        {
-            //string contents = webBrowser1.Document.InvokeScript("OK").ToString();
-            //MessageBox.Show(contents, Application.ProductName);
-        }
-
-        private void OnDrawTilemap(MouseEventArgs e)
-        {
-            
-        }
-
-        private void tilemap_MouseDown(object sender, MouseEventArgs e)
-        {
-            
-        }
-
-        private void tilemap_MouseUp(object sender, MouseEventArgs e)
-        {
-            
-        }
-
-        /// <summary>
-        /// 맵에 그리드 라인 표시하는 함수
-        /// 백버퍼에 미리 그려 놓고 복사만 하는 방식을 사용하려 했으나, 적절한 방법을 찾지 못했습니다.
-        /// 따라서 타일을 그릴 때 같이 그려집니다.   
-        /// </summary>
-        /// <param name="mainGraphics"></param>
-        private void DrawGrid(Graphics mainGraphics)
-        {
-            
-        }
-
-        private void tilemap_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void InitWithTilemap(Graphics g)
-        {
-
-        }
-
-        private void tilemap_MouseMove(object sender, MouseEventArgs e)
-        {
-
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)

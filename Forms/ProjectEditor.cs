@@ -14,7 +14,7 @@ namespace Editor
     public partial class ProjectEditor : DarkForm
     {
 
-        private DarkForm mainForm;
+        private DarkForm mainForm = null;
 
         public ProjectEditor()
         {
@@ -90,7 +90,11 @@ namespace Editor
             {
                 DataManager.Instance.TilesetImage = openFileDialog1.FileName;
                 darkTileset.Text = openFileDialog1.FileName;
-                mainForm.Invalidate(true);
+
+                if(mainForm != null)
+                {
+                    mainForm.Invalidate(true);
+                }
             }
         }
     }

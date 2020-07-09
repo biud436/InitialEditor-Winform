@@ -69,7 +69,7 @@ namespace Editor
             {
                 // 스크립트 파일을 노드에 추가합니다.
                 var node = new DarkTreeNode();
-                node.Text = String.Format("{0}", Path.GetFileName(i));
+                node.Text = $"{Path.GetFileName(i)}";
                 darkScriptTree.Nodes.Add(node);
             }
 
@@ -80,7 +80,7 @@ namespace Editor
         {
             var currentPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent;
             string htmlPath = Path.Combine(currentPath.FullName).Replace("\\", "/");
-            webBrowser1.Url = new Uri(String.Format("file:///{0}/res/ace/editor.html", htmlPath));
+            webBrowser1.Url = new Uri($"file:///{htmlPath}/res/ace/editor.html");
             webBrowser1.DocumentCompleted += WebBrowser1_DocumentCompleted; ;
             webBrowser1.ObjectForScripting = true;
         }
@@ -110,7 +110,7 @@ namespace Editor
                 webBrowser1.Document.InvokeScript("loadScript", new object[] { contents });
 
                 lastScriptPath = targetFile;
-                toolStripStatusLabel1.Text = String.Format("스크립트 위치 : {0}", lastScriptPath);
+                toolStripStatusLabel1.Text = $"스크립트 위치 : {lastScriptPath}";
             }
         }
 

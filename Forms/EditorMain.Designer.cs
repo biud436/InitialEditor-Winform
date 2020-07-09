@@ -232,10 +232,6 @@
             this.tilemap.Size = new System.Drawing.Size(638, 503);
             this.tilemap.TabIndex = 0;
             this.tilemap.TabStop = false;
-            this.tilemap.Paint += new System.Windows.Forms.PaintEventHandler(this.tilemap_Paint);
-            this.tilemap.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tilemap_MouseDown);
-            this.tilemap.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tilemap_MouseMove);
-            this.tilemap.MouseUp += new System.Windows.Forms.MouseEventHandler(this.tilemap_MouseUp);
             // 
             // darkMenuStrip2
             // 
