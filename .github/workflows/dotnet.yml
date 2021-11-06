@@ -16,10 +16,10 @@ jobs:
                   dotnet-version: 5.0.x
             - name: Restore dependencies
               run: dotnet restore
-            - name: Download Package
-              run: |
-                  dotnet add package Newtonsoft.Json --version 12.0.3
-                  dotnet add package DarkUI --version 2.0.1
+            # - name: Download Package
+            #   run: |
+            #       dotnet add package Newtonsoft.Json --version 12.0.3
+            #       dotnet add package DarkUI --version 2.0.1
             - name: Build
               run: dotnet build --no-restore
             - name: Test
