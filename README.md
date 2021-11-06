@@ -1,4 +1,4 @@
-﻿# 소개
+﻿# Introduction
 
 This tool allows you to fill tiles using tile editor in the Initial2D and start the test game and edit a lua script using an internel script editor.
 
