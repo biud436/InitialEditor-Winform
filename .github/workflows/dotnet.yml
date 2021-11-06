@@ -12,10 +12,8 @@ jobs:
             - uses: actions/checkout@v2
             - name: Add msbuild to PATH
               uses: microsoft/setup-msbuild@v1.1
-            - name: Setup NuGet
-              uses: NuGet/setup-nuget@v1.0.2
-            - name: Restore NuGet Packages
-              run: nuget restore Editor.sln
+            - name: Restore Nuget Packages using msbuild
+              run: msbuild -t:restore
             - name: Build
               run: msbuild Editor.csproj -t:rebuild -verbosity:diag -property:Configuration=Release
             - name: Upload Artifacts
