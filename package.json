@@ -1,0 +1,23 @@
+{
+    "name": "InitialEditor-Winform",
+    "version": "1.0.0",
+    "description": "This tool allows you to fill tiles using tile editor in the Initial2D and start the test game and edit a lua script using an internel script editor.",
+    "main": "index.js",
+    "directories": {
+        "doc": "docs"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/biud436/InitialEditor-Winform.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/biud436/InitialEditor-Winform/issues"
+    },
+    "homepage": "https://github.com/biud436/InitialEditor-Winform#readme"
+}
