@@ -59,6 +59,11 @@ namespace Editor
 
         private void darkButtonOk_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrEmpty(DataManager.Instance.TilesetImage))
+            {
+                DarkMessageBox.ShowError("타일셋이 설정되어있지 않습니다.", "경고");
+                return;
+            }
             Close();
         }
 
@@ -80,6 +85,8 @@ namespace Editor
             darkMapWidth.Text = DataManager.Instance.MapWidth.ToString();
             darkMapHeight.Text = DataManager.Instance.MapHeight.ToString();
             darkTileset.Text = DataManager.Instance.TilesetImage;
+
+
         }
 
         private void darkTilesetOpenButton_Click(object sender, EventArgs e)
