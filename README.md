@@ -1,6 +1,6 @@
 ﻿# 소개
 
-C# Winform으로 만든 맵에디터입니다 (보존용)
+This tool allows you to fill tiles using tile editor in the Initial2D and start the test play and edit a lua script.
 
 <p align="center">
     <img src="./docs/0.png">
