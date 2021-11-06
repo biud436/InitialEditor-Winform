@@ -40,7 +40,7 @@ jobs:
             - name: ZIP Arhcive using powershell
               shell: powershell
               run: |
-                  Add-Type -AssemblyName System.IO.Compression.FileSystem
+                  Add-Type -AssemblyName System.IO.Compression.FileSystem;
                   $zip = New-Object System.IO.Compression.ZipFile;
                   $zip.CreateArchive("MapEditor.zip", "bin/Release/");
                   $zip.Dispose();
