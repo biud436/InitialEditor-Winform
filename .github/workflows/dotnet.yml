@@ -14,10 +14,6 @@ jobs:
               uses: actions/setup-dotnet@v1
               with:
                   dotnet-version: 5.0.x
-            - name: Remove Packages
-              run: |
-                  dotnet remove package Newtonsoft.Json
-                  dotnet remove package DarkUI
             - name: Restore dependencies
               run: dotnet restore
             - name: Download Package
