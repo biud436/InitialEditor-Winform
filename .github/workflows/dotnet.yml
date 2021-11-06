@@ -33,6 +33,12 @@ jobs:
                       자동 릴리즈입니다.
                   draft: false
                   prerelease: false
+            - name: ZIP Arhcive using powershell
+              shell: powershell
+              run: |
+                  $zip = New-Object System.IO.Compression.ZipFile;
+                  $zip.CreateArchive("MapEditor.zip", "bin/Release/");
+                  $zip.Dispose();
             - name: Upload Release Asset
               id: upload-release-asset
               uses: actions/upload-release-asset@v1
