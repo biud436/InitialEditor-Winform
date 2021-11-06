@@ -13,7 +13,7 @@ jobs:
         steps:
             - uses: actions/checkout@v2.4.0
               with:
-                  ref: "origin/master"
+                  ref: "master"
             - name: Setup .NET
               uses: actions/setup-dotnet@v1
               with:
